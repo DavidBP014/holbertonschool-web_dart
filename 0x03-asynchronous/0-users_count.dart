@@ -1,15 +1,6 @@
-import 'dart:async';
-
-Future<int> fetchUsersCount() => Future.delayed(
-      const Duration(seconds: 2),
-      () => 19,
-    );
+import '0-util.dart'; // This import assumes fetchUsersCount is in 0-util.dart
 
 Future<void> usersCount() async {
   int count = await fetchUsersCount();
   print(count);
-}
-
-void main() async {
-  await usersCount();
 }
